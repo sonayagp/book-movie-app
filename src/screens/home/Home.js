@@ -1,7 +1,17 @@
 import React, { Component } from "react";
+import Header from '../../common/header/Header';
 
 export default class Home extends Component {
+
+
+
   render() {
-    return <h2>Home</h2>;
+    return (
+      <div>
+        <Header baseUrl={this.props.baseUrl} />
+
+      </div>
+    );
   }
+
 }
