@@ -1,11 +1,9 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import 'typeface-roboto';
 import registerServiceWorker from './registerServiceWorker';
 import Controller from './screens/Controller';
 
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<Controller />);
+ReactDOM.render(<Controller />, document.getElementById('root'));
 registerServiceWorker();

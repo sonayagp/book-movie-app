@@ -2,39 +2,49 @@
     background-color: #222;
     height: 36px;
     padding: 8px 32px 8px 16px;
-}
-
-.login-button {
+  }
+  
+  .login-button {
     float: right;
-}
-
-.app-logo {
-    animation: app-logo-spin infinite 8s linear;
+  }
+  
+  .app-logo {
+    float: left;
     height: 35px;
     background: #ff7f7f;
-}
-
-.bookshow-button {
+  
+    animation: app-logo-spin infinite 8s linear;
+    -webkit-animation: app-logo-spin 8s infinite linear;
+    -moz-animation: app-logo-spin 8s infinite linear;  
+  }
+  
+  .bookshow-button {
     float: right;
     margin-right: 8px;
-}
-
-@keyframes app-logo-spin {
-    from { transform: scaleX(-1); }
-}
-
-.tabs {
+  }
+  
+  .tabs {
     margin-bottom: 20px;
-}
-
-.dispNone {
+  }
+  
+  .dispNone {
     display: none;
-}
-
-.dispBlock {
+  }
+  
+  .dispBlock {
     display: block;
-}
-
-.red {
+  }
+  
+  .red {
     color: red;
-}
+  }
+  
+  @-webkit-keyframes app-logo-spin {
+    to { -webkit-transform: rotateY(360deg); }
+  }
+  @keyframes app-logo-spin {
+    to { transform: rotateY(360deg); }          
+  }
+  @-moz-keyframes app-logo-spin{
+    to { -moz-transform: rotateY(360deg); }
+  }
