@@ -13,7 +13,7 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.paper
     },
     gridListMain: {
-        transform: 'translateZ(0)',
+        transform: 'translateZ(0)',        
     },
     releasedMovieGridItem: {
         margin: '15px',
@@ -34,7 +34,7 @@ const ReleasedMovies = (props) => {
 
         history.push('/movie/' + movieId);
     }
-
+    
     const { classes } = props;
 
     return (

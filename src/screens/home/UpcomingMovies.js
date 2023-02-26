@@ -29,29 +29,29 @@ const styles = theme => ({
 const UpcomingMovies =(props)=> {
     const [upcomingMovies, setUpcomingMovies] =useState([]);
     useEffect(() =>{
-        axios.get(props.baseUrl + "movies?status=PUBLISHED&limit=6")
-            .then(res => {
-                setUpcomingMovies(res.data.movies)
+        axios.get(props.baseUrl + "movies?status=PUBLISHED&limit=6") 
+        .then(res => {
+        setUpcomingMovies(res.data.movies)
 
-            });
+      });
     },[]);
     const { classes } = props;
 
     return (
         <div>
-            <div className={classes.upcomingMoviesHeading}>
-                <span>Upcoming Movies</span>
-            </div>
+        <div className={classes.upcomingMoviesHeading}>
+                    <span>Upcoming Movies</span>
+                </div>
 
-            <GridList cols={5} className={classes.gridListUpcomingMovies} >
-                {upcomingMovies.map(movie => (
-                    <GridListTile key={"upcoming" + movie.id}>
-                        <img src={movie.poster_url} className="movie-poster" alt={movie.title} />
-                        <GridListTileBar title={movie.title} />
-                    </GridListTile>
-                ))}
-            </GridList>
-        </div>
+                <GridList cols={5} className={classes.gridListUpcomingMovies} >
+                    {upcomingMovies.map(movie => (
+                        <GridListTile key={"upcoming" + movie.id}>
+                            <img src={movie.poster_url} className="movie-poster" alt={movie.title} />
+                            <GridListTileBar title={movie.title} />
+                        </GridListTile>
+                    ))}
+                </GridList>
+                </div>
     )
 }
 
